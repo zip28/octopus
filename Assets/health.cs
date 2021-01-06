@@ -6,9 +6,11 @@ public class health : MonoBehaviour
 {
     public float speed =1;
     public float lifetime;
+    private void Start() {
+    }
     void Update()
     {
-        gameObject.transform.position += Vector3.left*speed;
+        gameObject.transform.position += Vector3.left*speed*Time.deltaTime;
         Invoke("DeleteHealth",lifetime);
     }
     void DeleteHealth(){

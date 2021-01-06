@@ -11,7 +11,7 @@ public class stick : MonoBehaviour
     void Update()
     {
         if(move){
-            gameObject.transform.position += Vector3.left*speed;
+            gameObject.transform.position += Vector3.left*speed*Time.deltaTime;
         }
         Invoke("DeleteStick",lifetime);
     }
@@ -22,10 +22,13 @@ public class stick : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             Debug.Log("hit");
             
-            if(!move && other.GetComponent<octopus>().lie && other.GetComponent<octopus>().health<3){
+            if(!move && other.gameObject.GetComponent<octopus>().lie && other.gameObject.GetComponent<octopus>().health<3){
             }else{
                 other.gameObject.GetComponent<octopus>().health -= damage;
             }
+        }
+        if(other.gameObject.tag == "Scorer" && !move){
+            GetComponentInParent<stick_spawner>().Player.score += 1;
         }
     }
 }

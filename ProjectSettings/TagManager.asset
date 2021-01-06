@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - stick
+  - scorer
+  - Scorer
   layers:
   - Default
   - TransparentFX

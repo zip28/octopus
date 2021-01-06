@@ -9,14 +9,16 @@ public class monet : MonoBehaviour
     public int price = 1;
     void Update()
     {
-        gameObject.transform.position += Vector3.left*speed;
+        gameObject.transform.position += Vector3.left*speed*Time.deltaTime;
         Invoke("DeleteMonet",lifetime);
     }
     void DeleteMonet(){
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        other.GetComponent<octopus>().money +=price;
-        Destroy(gameObject);
+        if(other.tag == "Player"){
+            other.GetComponent<octopus>().money +=price;
+            Destroy(gameObject);
+        }
     }
 }

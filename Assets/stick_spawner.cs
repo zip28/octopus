@@ -33,19 +33,24 @@ public class stick_spawner : MonoBehaviour
         }
         if (lastrnd == rnd && rnd == 2 && obj>1 && obj <6){
             Debug.Log("Monet!");
-            Instantiate(monet,gameObject.transform.position+Vector3.left*time*speed*middle/2+ Vector3.up*range*(Random.Range(0,2)*2+1),Quaternion.identity,gameObject.transform);
+            Instantiate(monet,gameObject.transform.position+Vector3.left*time*speed*Time.deltaTime*middle/2+ Vector3.up*range*(Random.Range(0,2)*2+1),Quaternion.identity,gameObject.transform);
         }else if(lastrnd == rnd && rnd == 2 && obj> 7 && obj<15-Player.health){
-            Instantiate(health,gameObject.transform.position+Vector3.left*time*speed*middle/2+ Vector3.up*range*(Random.Range(0,2)*2+1),Quaternion.identity,gameObject.transform);
+            Instantiate(health,gameObject.transform.position+Vector3.left*time*speed*Time.deltaTime*middle/2+ Vector3.up*range*(Random.Range(0,2)*2+1),Quaternion.identity,gameObject.transform);
         }else if(lastrnd == rnd && rnd != 2 && obj>15 && obj <18){
-            Instantiate(diamond,gameObject.transform.position+Vector3.left*time*speed*middle/2+ Vector3.up*range*(rnd*2+1),Quaternion.identity,gameObject.transform);
+            Instantiate(diamond,gameObject.transform.position+Vector3.left*time*speed*Time.deltaTime*middle/2+ Vector3.up*range*(Mathf.Abs( rnd*2-5)),Quaternion.identity,gameObject.transform);
         }
         if (lastrnd == rnd && rnd != 2 && obj>1 && obj <6){
             Debug.Log("Monet!");
-            Instantiate(monet,gameObject.transform.position+Vector3.left*time*speed*middle/2+ Vector3.up*range*2,Quaternion.identity,gameObject.transform);
+            Instantiate(monet,gameObject.transform.position+Vector3.left*time*speed*Time.deltaTime*middle/2+ Vector3.up*range*2,Quaternion.identity,gameObject.transform);
         }else if(lastrnd == rnd && rnd != 2 && obj> 7 && obj<15-Player.health){
-            Instantiate(health,gameObject.transform.position+Vector3.left*time*speed*middle/2+ Vector3.up*range*2,Quaternion.identity,gameObject.transform);
+            Instantiate(health,gameObject.transform.position+Vector3.left*time*speed*Time.deltaTime*middle/2+ Vector3.up*range*2,Quaternion.identity,gameObject.transform);
         }
         lastrnd = rnd;
         StartCoroutine(SpawnStick());
+    }
+    public void Stopper(){
+        for (int i = 0;i<gameObject.transform.childCount;i++){
+            Destroy(gameObject.transform.GetChild(0).gameObject);
+        }
     }
 }

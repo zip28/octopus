@@ -15,6 +15,8 @@ TextureImporter:
     21300020: graphics_10
     21300022: graphics_11
     21300024: graphics_12
+    21300026: graphics_13
+    21300028: graphics_14
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -334,13 +336,53 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: c09f4807bd93e7840b41c912f4b2d0e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graphics_13
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 50
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3b2e997f6da734193cfa3774ce5770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: graphics_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 70
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c36789455f3994981f3f0d877f9eec
       vertices: []
       indices: 
       edges: []

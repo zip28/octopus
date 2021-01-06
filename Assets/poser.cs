@@ -14,6 +14,6 @@ public class poser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new Vector3 (target.position.x,target.position.y,gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3 (target.position.x,target.position.y,gameObject.transform.position.z);
     }
 }
