@@ -8,6 +8,7 @@ public class stick : MonoBehaviour
     public float lifetime;
     public bool move;
     public int damage = 1;
+    public bool giveScore = true;
     void Update()
     {
         if(move){
@@ -20,14 +21,13 @@ public class stick : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
-            Debug.Log("hit");
             
             if(!move && other.gameObject.GetComponent<octopus>().lie && other.gameObject.GetComponent<octopus>().health<3){
             }else{
                 other.gameObject.GetComponent<octopus>().health -= damage;
             }
         }
-        if(other.gameObject.tag == "Scorer" && !move){
+        if(other.gameObject.tag == "Scorer" && giveScore){
             GetComponentInParent<stick_spawner>().Player.score += 1;
         }
     }

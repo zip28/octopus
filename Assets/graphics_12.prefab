@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  lifetime: 10
+  lifetime: 20
   price: 5
 --- !u!61 &61444473571209044
 BoxCollider2D:

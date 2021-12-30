@@ -53,6 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\backGroundScale.cs" />
+     <Compile Include="Assets\Buttons.cs" />
+     <Compile Include="Assets\exit.cs" />
+     <Compile Include="Assets\GameScemeLoader.cs" />
      <Compile Include="Assets\health.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
@@ -61,17 +65,23 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+     <Compile Include="Assets\KnobPoser.cs" />
      <Compile Include="Assets\monet.cs" />
      <Compile Include="Assets\octopus.cs" />
      <Compile Include="Assets\paralaks.cs" />
      <Compile Include="Assets\poser.cs" />
      <Compile Include="Assets\rotator.cs" />
+     <Compile Include="Assets\SceneLoadMenu.cs" />
      <Compile Include="Assets\scorer.cs" />
      <Compile Include="Assets\second_text.cs" />
+     <Compile Include="Assets\showMoneyAndScore.cs" />
      <Compile Include="Assets\soul.cs" />
      <Compile Include="Assets\stick.cs" />
      <Compile Include="Assets\stick_spawner.cs" />
-     <None Include="Assets\NewUnlitShader.shader" />
+     <Compile Include="Assets\stoneSpawner.cs" />
+     <Compile Include="Assets\UpDownButton.cs" />
+     <Compile Include="Assets\volume.cs" />
+     <None Include="Assets\NewSurfaceShader.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Progects/octopus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
